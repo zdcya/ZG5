@@ -4,6 +4,8 @@ import android.util.Log;
 
 import com.bawei.net.common.Constanct;
 import com.bawei.net.procotol.TokenRespEntity;
+import com.bawei.net.retrofit.CustomGsonConverterFactory;
+import com.bawei.net.retrofit.calladapter.LiveDataCallAdapterFactory;
 import com.bawei.net.service.TokenApi;
 
 import java.io.IOException;
@@ -43,8 +45,9 @@ public class RetrofitFactory {
 
         return new Retrofit.Builder()
                 .baseUrl(BuildConfig.BaseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(CustomGsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addCallAdapterFactory(LiveDataCallAdapterFactory.create())
                 .client(createOkHttpClient())
                 .build();
     }
