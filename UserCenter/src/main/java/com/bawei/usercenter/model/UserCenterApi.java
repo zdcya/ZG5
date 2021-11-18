@@ -1,0 +1,20 @@
+package com.bawei.usercenter.model;
+
+import androidx.lifecycle.LiveData;
+
+import com.bawei.net.procotol.BaseRespEntity;
+import com.bawei.usercenter.entity.UserEntity;
+
+import retrofit2.http.Body;
+import retrofit2.http.POST;
+
+
+public interface UserCenterApi {
+
+    @POST("api/User/login")
+    LiveData<BaseRespEntity<UserEntity>> login(@Body UserEntity entity);
+
+    @POST("api/User/register")
+    LiveData<BaseRespEntity<UserEntity>> retister(@Body UserEntity entity);
+
+}

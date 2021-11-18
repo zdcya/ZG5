@@ -1,5 +1,6 @@
 package com.bawei.net;
 
+
 import android.util.Log;
 
 import com.bawei.net.common.Constanct;
@@ -27,7 +28,6 @@ public class RetrofitFactory {
 
     private Retrofit retrofit = null;
 
-
     public static class Holder{
         private static  RetrofitFactory INSTANCE = new RetrofitFactory();
     }
@@ -44,7 +44,7 @@ public class RetrofitFactory {
     private Retrofit createRetrofit() {
 
         return new Retrofit.Builder()
-                .baseUrl(BuildConfig.BaseUrl)
+                .baseUrl("http://82.156.178.182:8082/")
                 .addConverterFactory(CustomGsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addCallAdapterFactory(LiveDataCallAdapterFactory.create())
@@ -103,7 +103,6 @@ public class RetrofitFactory {
         };
     }
 
-
     private String doTokenTask(){
 
         TokenApi tokenApi =create(TokenApi.class);
@@ -126,11 +125,9 @@ public class RetrofitFactory {
 
     }
 
-
     public <T> T create(Class<?> service){
         return (T)retrofit.create(service);
     }
-
 
     private Interceptor createOkHttpNetInterceptor() {
 
