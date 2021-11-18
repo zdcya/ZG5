@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     >
 
     <data>
         <variable
-            name="user"
+            name="user_reg"
             type="androidx.lifecycle.MutableLiveData&lt;com.bawei.usercenter.entity.UserEntity>" />
 
         <variable
-            name="owner"
-            type="com.bawei.usercenter.ui.LoginActivity" />
-
+            name="owner_reg"
+            type="com.bawei.usercenter.ui.RetisterActivity" />
     </data>
 
     <LinearLayout
@@ -26,37 +23,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <EditText
-                android:text="@={user.username}"
+                android:text="@={user_reg.username}"
                 android:hint="please input phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></EditText>
             <EditText
-                android:text="@={user.pwd}"
-                android:inputType="textPassword"
+                android:text="@={user_reg.pwd}"
                 android:hint="please input password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></EditText>
             <Button
-                android:onClick="@{(view)->owner.onLogin(view)}"
-                android:text="LogIn"
+                android:onClick="@{(view)->owner_reg.onRetister(view)}"
+                android:text="retister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></Button>
 
 
             <TextView
-                android:onClick="@{(view)->owner.toRetister(view)}"
+                android:onClick="@{(view)->owner_reg.toLogin(view)}"
                 android:textColor="#80DEEA"
                 android:textSize="20dp"
                 android:layout_marginTop="50dp"
-                android:text="注册"
+                android:text="登录"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"></TextView>
         </LinearLayout>
 
 
 
-    </LinearLayout>
 
+    </LinearLayout>
 
 
 </layout>
