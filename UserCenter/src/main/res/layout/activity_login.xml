@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
-
     <data>
         <variable
             name="user"
@@ -26,17 +25,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <EditText
+                android:background="@drawable/frame"
                 android:text="@={user.username}"
                 android:hint="please input phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></EditText>
             <EditText
                 android:text="@={user.pwd}"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/frame"
                 android:inputType="textPassword"
                 android:hint="please input password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></EditText>
             <Button
+                android:layout_marginTop="20dp"
                 android:onClick="@{(view)->owner.onLogin(view)}"
                 android:text="LogIn"
                 android:layout_width="match_parent"
