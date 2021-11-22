@@ -6,7 +6,9 @@ import android.util.Log;
 import com.bawei.net.common.Constanct;
 import com.bawei.net.procotol.TokenRespEntity;
 import com.bawei.net.retrofit.CustomGsonConverterFactory;
+import com.bawei.net.retrofit.CustomGsonConverterFactory2;
 import com.bawei.net.retrofit.calladapter.LiveDataCallAdapterFactory;
+import com.bawei.net.retrofit.calladapter.LiveDataCallAdapterFactory2;
 import com.bawei.net.service.TokenApi;
 
 import java.io.IOException;
@@ -27,6 +29,7 @@ public class RetrofitFactory {
     private static RetrofitFactory instance = null;
 
     private Retrofit retrofit = null;
+    private Retrofit retrofit2 = null;
 
     public static class Holder{
         private static  RetrofitFactory INSTANCE = new RetrofitFactory();
@@ -39,6 +42,8 @@ public class RetrofitFactory {
     public RetrofitFactory() {
 
         retrofit = createRetrofit();
+        retrofit2 = createRetrofit2();
+
     }
 
     private Retrofit createRetrofit() {
@@ -46,8 +51,19 @@ public class RetrofitFactory {
         return new Retrofit.Builder()
                 .baseUrl("http://82.156.178.182:8082/")
                 .addConverterFactory(CustomGsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addCallAdapterFactory(LiveDataCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .client(createOkHttpClient())
+                .build();
+    }
+
+    private Retrofit createRetrofit2() {
+
+        return new Retrofit.Builder()
+                .baseUrl("http://82.156.178.182:8082/")
+                .addConverterFactory(CustomGsonConverterFactory2.create())
+                .addCallAdapterFactory(LiveDataCallAdapterFactory2.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(createOkHttpClient())
                 .build();
     }
@@ -118,7 +134,6 @@ public class RetrofitFactory {
 
         } catch (IOException e) {
             e.printStackTrace();
-            Log.e("---",e.getMessage());
         }
 
         return "";
@@ -127,6 +142,10 @@ public class RetrofitFactory {
 
     public <T> T create(Class<?> service){
         return (T)retrofit.create(service);
+    }
+
+    public <T> T create2(Class<?> service){
+        return (T)retrofit2.create(service);
     }
 
     private Interceptor createOkHttpNetInterceptor() {

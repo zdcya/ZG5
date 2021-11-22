@@ -1,5 +1,6 @@
 package com.bawei.net.retrofit;
 
+import com.bawei.net.procotol.BaseListRespEntity;
 import com.bawei.net.procotol.BaseRespEntity;
 import com.bawei.net.procotol.TokenRespEntity;
 import com.google.gson.Gson;
@@ -39,6 +40,8 @@ public class CustomResponseBodyConverter<T> implements Converter<ResponseBody,T>
         }else {
             return gson.fromJson(respContent,type);
         }
+
+
 
 
     }

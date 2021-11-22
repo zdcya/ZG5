@@ -11,6 +11,7 @@ import com.bawei.mvvmcore.viewmodel.BaseViewModel;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public abstract class BaseMVVMActivity<VM extends BaseViewModel,Binding extends ViewDataBinding> extends BaseActivity {
 
@@ -46,6 +47,7 @@ public abstract class BaseMVVMActivity<VM extends BaseViewModel,Binding extends 
         for (Map.Entry<Integer,Object> i: mMap.entrySet()) {
                 mBinding.setVariable(i.getKey(),i.getValue());
         }
+
     }
 
     //项目父类Map添加变量

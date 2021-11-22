@@ -1,4 +1,4 @@
-package com.bawei.my_project_mvvm;
+package com.bawei.my_project_mvvm.customView;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -15,6 +15,8 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
+
+import com.bawei.my_project_mvvm.R;
 
 public class ProgressView extends View {
 
@@ -106,6 +108,7 @@ public class ProgressView extends View {
         super.onSizeChanged(w, h, oldw, oldh);
         centerX = getMeasuredWidth()/2;
         centerY = getMeasuredHeight()/2;
+
     }
 
     @Override
@@ -120,6 +123,9 @@ public class ProgressView extends View {
         int paddingRight = getPaddingRight();
         int paddingTop = getPaddingTop();
         int paddingBottom = getPaddingBottom();
+
+
+
 
         RectF rectF = new RectF(0 + padding, 0 + padding, getMeasuredWidth() - padding, getMeasuredHeight() - padding);
         canvas.drawArc(rectF,0,swweepAngle,false,mPaint);

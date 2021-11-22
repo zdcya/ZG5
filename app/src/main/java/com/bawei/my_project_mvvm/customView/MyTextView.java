@@ -1,4 +1,4 @@
-package com.bawei.my_project_mvvm;
+package com.bawei.my_project_mvvm.customView;
 
 import android.content.Context;
 import android.graphics.Canvas;

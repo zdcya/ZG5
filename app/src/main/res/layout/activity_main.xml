@@ -5,16 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
-    <com.bawei.my_project_mvvm.ProgressView
+    <com.bawei.my_project_mvvm.customView.ProgressView
         android:id="@+id/proview"
-        android:layout_marginLeft="370dp"
         app:textColor="#80CBC4"
         app:textSize="20"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></com.bawei.my_project_mvvm.ProgressView>
-
+        android:layout_height="wrap_content"></com.bawei.my_project_mvvm.customView.ProgressView>
 
 
 

@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#80DEEA"
-    tools:context=".MainActivity2">
+    tools:context=".ui.MainActivity2">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

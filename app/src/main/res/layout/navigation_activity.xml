@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/navigation_vp"
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></androidx.viewpager.widget.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/navigation_rg"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:textColor="@drawable/font"
+            android:drawableTop="@drawable/home"
+            android:gravity="center"
+            android:text="刷新"
+            android:button="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:textColor="@drawable/font"
+            android:drawableTop="@drawable/classify"
+            android:gravity="center"
+            android:text="分类"
+            android:button="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:textColor="@drawable/font"
+            android:drawableTop="@drawable/discover"
+            android:gravity="center"
+            android:text="发现"
+            android:button="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:textColor="@drawable/font"
+            android:drawableTop="@drawable/shopping"
+            android:gravity="center"
+            android:text="购物车"
+            android:button="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radio5"
+            android:textColor="@drawable/font"
+            android:drawableTop="@drawable/mine"
+            android:gravity="center"
+            android:text="我的"
+            android:button="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"></RadioButton>
+
+
+    </RadioGroup>
+
+</LinearLayout>
