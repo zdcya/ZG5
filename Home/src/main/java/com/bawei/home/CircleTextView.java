@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+
+
 public class CircleTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     private Paint mPaint;
@@ -25,7 +27,7 @@ public class CircleTextView extends androidx.appcompat.widget.AppCompatTextView 
 
     public CircleTextView( Context context, AttributeSet attrs) {
         super(context, attrs);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.CircleTextView);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CircleTextView);
         TextC = typedArray.getColor(R.styleable.CircleTextView_TextC,TextC);
         init();
     }

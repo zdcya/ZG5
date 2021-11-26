@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.bawei.my_project_mvvm.R;
-import com.bawei.my_project_mvvm.customView.ProgressView;
+import com.bawei.resource.customView.ProgressView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ProgressView.ProgressVeiwListener {
 
@@ -19,9 +22,10 @@ public class MainActivity extends AppCompatActivity implements ProgressView.Prog
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-
         proview.init(this);
 
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        
 
     }
 

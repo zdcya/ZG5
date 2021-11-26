@@ -45,7 +45,7 @@ public abstract class BaseMVVMFragment<VM extends BaseViewModel,Binding extends 
     private void setVars(Binding mBinding, HashMap<Integer, Object> mMap) {
 
         if (mMap == null || mMap.size() == 0){
-            throw new MVVMNormaIException("please set variables...");
+//            throw new MVVMNormaIException("please set variables...");
         }
 
         for (Map.Entry<Integer,Object> entry :mMap.entrySet()) {

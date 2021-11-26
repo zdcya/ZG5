@@ -41,6 +41,19 @@ dependencies {
     implementation project(path: ':Utils')
     implementation project(path: ':MVVMCore')
     implementation project(path: ':Net')
+
+
+    if (isClassify == false){
+        implementation project(path: ':Classify')
+    }
+
+    if (isUserCenter == false){
+        implementation project(path: ':UserCenter')
+    }
+
+    if (isHomeComponent==false){
+        implementation project(path: ':Home')
+    }
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

@@ -6,9 +6,9 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/navigation_vp"
-        android:layout_weight="10"
         android:layout_width="match_parent"
-        android:layout_height="0dp"></androidx.viewpager.widget.ViewPager>
+        android:layout_height="0dp"
+        android:layout_weight="10"></androidx.viewpager.widget.ViewPager>
 
     <RadioGroup
         android:id="@+id/navigation_rg"

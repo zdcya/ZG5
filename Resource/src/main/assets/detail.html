@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+
+    <script>
+            window.onload=function(){
+
+                var add=document.getElementById("add");
+                add.addEventListener("click",function(){
+                   window.MyAndroid.addShoping();
+                });
+
+
+                var result= window.MyAndroid.getimg();
+                var result2= window.MyAndroid.getname();
+                var result3= window.MyAndroid.getprice();
+
+
+                document.getElementById('img1').setAttribute("src",result);
+                document.getElementById('txt1').innerHTML = result2;
+                document.getElementById('txt2').innerHTML = result3+"元";
+
+
+
+
+
+            }
+    </script>
+</head>
+<body>
+<img src="https://www.wahaotu.com/uploads/allimg/201904/1555074510295049.jpg" width="300" height="300" id="img1"/>
+
+<p id="txt1" >8999.00</p>
+
+<p id="txt2">新款短袖男潮国潮酒红色胖子夏t恤</p>
+
+
+<button style=" width: 100px;height: 40px;background: red;color: white;" id="add">加入购物车</button>
+
+<button style=" width: 100px;height: 40px;background: orange; color: white;">立即购买</button>
+
+
+<a href="xiaoming://testtest/test?username=zhangsan&pwd=123">跳转到购物车</a>
+
+</body>
+</html>

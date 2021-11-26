@@ -1,4 +1,4 @@
-package com.bawei.home;
+package com.bawei.utils;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -10,7 +10,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
 
     private  ArrayList<Fragment> fragments;
 
-    public FragmentAdapter(FragmentManager fm,ArrayList<Fragment> fragments) {
+    public FragmentAdapter(FragmentManager fm, ArrayList<Fragment> fragments) {
         super(fm);
         this.fragments = fragments;
     }

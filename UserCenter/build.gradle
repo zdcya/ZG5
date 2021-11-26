@@ -1,5 +1,7 @@
-plugins {
-    id 'com.android.application'
+if (isUserCenter.toBoolean()){
+    apply plugin: 'com.android.application'
+}else {
+    apply plugin: 'com.android.library'
 }
 
 android {
@@ -41,6 +43,19 @@ android {
 
     dataBinding{
         enabled = true
+    }
+
+    resourcePrefix "user_"
+
+    sourceSets{
+        main{
+            if (isUserCenter.toBoolean()){
+                manifest.srcFile 'src/main/component/AndroidManifest.xml'
+            }
+            else{
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
     }
 }
 

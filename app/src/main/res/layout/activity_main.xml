@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,15 +7,16 @@
     android:orientation="vertical"
     tools:context=".ui.MainActivity">
 
-    <com.bawei.my_project_mvvm.customView.ProgressView
+    <com.bawei.resource.customView.ProgressView
+        android:layout_alignParentRight="true"
         android:id="@+id/proview"
         app:textColor="#80CBC4"
         app:textSize="20"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></com.bawei.my_project_mvvm.customView.ProgressView>
+        android:layout_height="wrap_content"></com.bawei.resource.customView.ProgressView>
 
 
 
 
 
-</LinearLayout>
+</RelativeLayout>

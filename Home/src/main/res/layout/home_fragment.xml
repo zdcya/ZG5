@@ -4,12 +4,9 @@
 
 
     <data>
-
         <variable
             name="type"
             type="androidx.lifecycle.MutableLiveData&lt;java.util.List&lt;com.bawei.home.entity.TypeEntity>>" />
-
-
     </data>
 
 
@@ -31,11 +28,41 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#80DEEA"></LinearLayout>
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:text="实训电商项目"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+
+
+                    <ImageView
+                        android:layout_marginLeft="180dp"
+                        android:src="@drawable/sys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"></ImageView>
+
+                    <ImageView
+                        android:src="@drawable/msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"></ImageView>
+                </LinearLayout>
+
+                <EditText
+                    android:background="@drawable/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"></EditText>
 
                 <com.youth.banner.Banner
                     android:id="@+id/banner"

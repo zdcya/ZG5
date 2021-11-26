@@ -1,6 +1,7 @@
 package com.bawei.home.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,9 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
 
 import com.bawei.home.BR;
 import com.bawei.home.R;
@@ -21,9 +24,11 @@ import com.bawei.mvvmcore.view.BaseMVVMFragment;
 import com.bawei.net.procotol.BaseRespEntity;
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.youth.banner.Banner;
 import com.youth.banner.loader.ImageLoader;
+
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -119,6 +124,25 @@ public class HomeFragment extends BaseMVVMFragment<HomeCenterViewModel, HomeFrag
                         }
                     });
                     banner.start();
+
+
+                    myAdapter.setOnItemClickListener(new OnItemClickListener() {
+                        @Override
+                        public void onItemClick(@NonNull @NotNull BaseQuickAdapter<?, ?> adapter, @NonNull @NotNull View view, int position) {
+                            Intent intent = new Intent(getActivity(), GoodsDetailActivity.class);
+
+                            ArrayList<String> smallImages = (ArrayList<String>) myAdapter.getData().get(position).getSmallImages();
+                            String categoryName = myAdapter.getData().get(position).getShortTitle();
+                            String reservePrice = myAdapter.getData().get(position).getReservePrice();
+
+                            intent.putStringArrayListExtra("imgs",smallImages);
+                            intent.putExtra("name",categoryName);
+                            intent.putExtra("price",reservePrice);
+                            intent.putExtra("position",position);
+
+                            startActivity(intent);
+                        }
+                    });
 
 
                 } else {

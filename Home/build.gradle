@@ -1,6 +1,8 @@
-plugins {
-//    id 'com.android.library'
-    id 'com.android.application'
+
+if (isHomeComponent.toBoolean()){
+    apply plugin: 'com.android.application'
+}else {
+    apply plugin: 'com.android.library'
 }
 
 android {
@@ -30,6 +32,19 @@ android {
 
     dataBinding{
         enabled = true
+    }
+
+    
+
+    sourceSets{
+        main{
+            if (isHomeComponent.toBoolean()){
+                manifest.srcFile 'src/main/component/AndroidManifest.xml'
+            }
+            else{
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
     }
 }
 

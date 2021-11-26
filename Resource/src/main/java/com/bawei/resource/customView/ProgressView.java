@@ -1,4 +1,4 @@
-package com.bawei.my_project_mvvm.customView;
+package com.bawei.resource.customView;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -16,7 +16,8 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.bawei.my_project_mvvm.R;
+import com.bawei.resource.R;
+
 
 public class ProgressView extends View {
 

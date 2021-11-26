@@ -6,9 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.bawei.home.FragmentAdapter;
+
 import com.bawei.home.R;
-import com.bawei.home.ui.HomeFragment;
+import com.bawei.utils.FragmentAdapter;
+
 
 import java.util.ArrayList;
 

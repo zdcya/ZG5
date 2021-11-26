@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+   <LinearLayout
+       android:id="@+id/back_item"
+       android:padding="3dp"
+       android:background="#f8f8f8"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/dp_40">
+
+
+       <View
+           android:id="@+id/pitch_on"
+           android:background="#fff"
+           android:layout_width="3dp"
+           android:layout_height="match_parent"></View>
+
+       <TextView
+           android:id="@+id/txt_first"
+           android:ellipsize="end"
+           android:maxLength="5"
+           android:textSize="15dp"
+           android:gravity="center"
+           android:textColor="#BABABA"
+           android:text="超市"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"></TextView>
+
+   </LinearLayout>
+
+
+
+
+</LinearLayout>

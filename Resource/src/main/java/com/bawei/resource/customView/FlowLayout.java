@@ -1,4 +1,4 @@
-package com.bawei.my_project_mvvm.customView;
+package com.bawei.resource.customView;
 
 import android.content.Context;
 import android.util.AttributeSet;
