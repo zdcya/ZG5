@@ -3,8 +3,16 @@ package com.bawei.my_project_mvvm.ui;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
+import com.bawei.classify.ui.ClassifyFragment;
+import com.bawei.home.ui.HomeFragment;
 import com.bawei.mvvmcore.view.BaseActivity;
+import com.bawei.my_project_mvvm.FragmentAdapter;
 import com.bawei.my_project_mvvm.R;
+import com.bawei.usercenter.ui.LoginActivity;
+
+import java.util.ArrayList;
 
 public class navigationActivity extends BaseActivity {
     private androidx.viewpager.widget.ViewPager navigationVp;
@@ -22,18 +30,16 @@ public class navigationActivity extends BaseActivity {
         initView();
 
 
+        ArrayList<Fragment> fragments = new ArrayList<>();
 
-        navigationRg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId){
+        fragments.add(new HomeFragment());
+        fragments.add(new ClassifyFragment());
 
-                    case R.id.radio1:
+        FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager(), fragments);
 
-                        break;
-                }
-            }
-        });
+        navigationVp.setAdapter(fragmentAdapter);
+
+
     }
 
 

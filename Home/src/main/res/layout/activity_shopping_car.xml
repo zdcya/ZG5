@@ -57,6 +57,7 @@
                     android:textSize="20dp"></TextView>
 
                 <TextView
+                    android:id="@+id/sum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0.0"
@@ -91,6 +92,7 @@
 
 
         <Button
+            android:id="@+id/clearing"
             android:gravity="center"
             android:layout_marginLeft="10dp"
             android:textColor="#fff"

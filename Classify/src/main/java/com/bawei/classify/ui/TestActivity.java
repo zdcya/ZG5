@@ -8,8 +8,9 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 
+import com.bawei.classify.R;
 import com.bawei.utils.FragmentAdapter;
-import com.zy.home.R;
+
 
 import java.util.ArrayList;
 

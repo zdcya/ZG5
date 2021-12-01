@@ -41,6 +41,9 @@ dependencies {
     implementation project(path: ':Utils')
     implementation project(path: ':MVVMCore')
     implementation project(path: ':Net')
+    implementation project(path: ':Home')
+    implementation project(path: ':UserCenter')
+    implementation project(path: ':Classify')
 
 
     if (isClassify == false){

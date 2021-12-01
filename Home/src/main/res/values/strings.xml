@@ -1,1 +1,10 @@
-<resources></resources>
+<resources>
+
+    <string-array name="spinner">
+        <item>在线支付</item>
+        <item>微信支付</item>
+        <item>支付宝支付</item>
+        <item>银行卡支付</item>
+    </string-array>
+
+</resources>

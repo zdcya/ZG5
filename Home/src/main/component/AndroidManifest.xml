@@ -12,13 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.My_Project_MVVM">
+        <activity android:name=".ui.Order_detailActivity"></activity>
+        <activity android:name=".ui.OrderActivity" />
         <activity android:name=".ui.ShoppingCarActivity">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"></action>
-                <category android:name="android.intent.category.BROWSABLE"></category>
-                <category android:name="android.intent.category.DEFAULT"></category>
-                <data android:scheme="xiaoming" android:host="testtest" android:path="/test">
-                </data>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="testtest"
+                    android:path="/test"
+                    android:scheme="xiaoming" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.GoodsDetailActivity" />

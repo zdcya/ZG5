@@ -134,11 +134,13 @@ public class HomeFragment extends BaseMVVMFragment<HomeCenterViewModel, HomeFrag
                             ArrayList<String> smallImages = (ArrayList<String>) myAdapter.getData().get(position).getSmallImages();
                             String categoryName = myAdapter.getData().get(position).getShortTitle();
                             String reservePrice = myAdapter.getData().get(position).getReservePrice();
+                            Integer categoryId = myAdapter.getData().get(position).getCategoryId();
 
                             intent.putStringArrayListExtra("imgs",smallImages);
                             intent.putExtra("name",categoryName);
                             intent.putExtra("price",reservePrice);
                             intent.putExtra("position",position);
+                            intent.putExtra("id",categoryId);
 
                             startActivity(intent);
                         }

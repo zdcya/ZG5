@@ -6,15 +6,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class GoodsSql extends SQLiteOpenHelper {
-    public GoodsSql(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+public class Order_goods extends SQLiteOpenHelper {
+    public Order_goods(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table goods(ShortTitle varchar(100),PictUrl varchar(100),ReservePrice varchar(100),id Integer(100))");
-
+        db.execSQL("create table order_(id Integer(100),goods varchar(1000),paysum float,ispay Integer(100))");
     }
 
     @Override

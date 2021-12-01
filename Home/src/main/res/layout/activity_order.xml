@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f8f8f8"
+    tools:context=".ui.OrderActivity">
+
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="#fff"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:textSize="20dp"
+            android:text="订单详细"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="8dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/mr"
+                android:layout_width="50dp"
+                android:layout_height="20dp"></ImageView>
+
+            <ImageView
+                android:src="@drawable/jia"
+                android:layout_width="50dp"
+                android:layout_height="20dp"></ImageView>
+
+            <TextView
+                android:textColor="#000"
+                android:text="广东 广州 越秀区 "
+               android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="8dp"
+                android:text="东风中路268号 1109-1110"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+           <TextView
+               android:layout_marginLeft="8dp"
+               android:text="张小白"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"></TextView>
+
+           <TextView
+               android:layout_marginLeft="8dp"
+               android:text="181****0260"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"></TextView>
+       </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:text="支付方式"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <Spinner
+            android:gravity="center"
+            android:layout_marginLeft="200dp"
+             android:entries="@array/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Spinner>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#fff"
+        android:padding="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:text="京东自营"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_order"
+                android:src="@drawable/comp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"></ImageView>
+
+            <LinearLayout
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="共"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/num_order"
+                    android:text="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:text="件"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="310dp"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textColor="#f00"
+            android:text="￥"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/paySum_order"
+            android:layout_marginTop="15dp"
+            android:textColor="#f00"
+            android:text="8888"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+
+        <Button
+            android:id="@+id/pay"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="去支付"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Button>
+
+    </LinearLayout>
+
+
+</LinearLayout>

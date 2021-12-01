@@ -91,6 +91,8 @@ dependencies {
 //经典刷新头
     api  'com.scwang.smart:refresh-header-classics:2.0.3'
 
+    api 'com.alibaba:fastjson:1.2.41'
+
 
 
 

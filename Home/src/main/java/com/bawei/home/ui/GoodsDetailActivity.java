@@ -33,6 +33,7 @@ public class GoodsDetailActivity extends AppCompatActivity {
     String name;
     String price;
     SQLiteDatabase db;
+    int id;
 
     @SuppressLint("JavascriptInterface")
     @Override
@@ -53,6 +54,8 @@ public class GoodsDetailActivity extends AppCompatActivity {
         name = intent.getStringExtra("name");
         price = intent.getStringExtra("price");
         int position = intent.getIntExtra("position", 0);
+
+        id = intent.getIntExtra("id", 0);
 
 
         strings = new String[4];
@@ -100,8 +103,6 @@ public class GoodsDetailActivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
     @JavascriptInterface
@@ -122,27 +123,9 @@ public class GoodsDetailActivity extends AppCompatActivity {
     @JavascriptInterface
     public void addShoping(){
         ToastUtils.showLong("加入购物车");
-        db.execSQL("insert into goods values(?,?,?)",new Object[]{name,strings[0],price});
+        db.execSQL("insert into goods values(?,?,?,?)",new Object[]{name,strings[0],price,id});
 
         Cursor cursor = db.rawQuery("select * from goods", null);
-
-        ArrayList<Goods_sql> goods_sqls = new ArrayList<>();
-
-
-        while (cursor.moveToNext()){
-
-            String ShortTitle = cursor.getString(cursor.getColumnIndex("ShortTitle"));
-
-            Log.i("000", "onCreate: "+ShortTitle);
-            String PictUrl = cursor.getString(cursor.getColumnIndex("PictUrl"));
-            String ReservePrice = cursor.getString(cursor.getColumnIndex("ReservePrice"));
-
-            Goods_sql goods_sql = new Goods_sql(ShortTitle,PictUrl,ReservePrice);
-
-            goods_sqls.add(goods_sql);
-        }
-
-
 
     }
 
